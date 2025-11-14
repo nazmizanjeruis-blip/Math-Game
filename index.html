@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Game - Challenge Your Brain!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 Math Game</h1>
+            <p class="subtitle">Test your math skills!</p>
+        </header>
+
+        <div class="game-stats">
+            <div class="stat">
+                <span class="stat-label">Score:</span>
+                <span class="stat-value" id="score">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Streak:</span>
+                <span class="stat-value" id="streak">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Questions:</span>
+                <span class="stat-value" id="questions">0/10</span>
+            </div>
+        </div>
+
+        <div class="game-container">
+            <div id="game-area" class="game-area">
+                <div class="question-box">
+                    <p class="question" id="question">5 + 3 = ?</p>
+                </div>
+
+                <div class="input-section">
+                    <input 
+                        type="number" 
+                        id="answer-input" 
+                        placeholder="Enter your answer" 
+                        class="answer-input"
+                        autocomplete="off"
+                    >
+                    <button id="submit-btn" class="submit-btn">Submit Answer</button>
+                </div>
+
+                <div id="feedback" class="feedback"></div>
+
+                <div id="next-section" class="next-section" style="display: none;">
+                    <button id="next-btn" class="next-btn">Next Question</button>
+                </div>
+            </div>
+
+            <div id="game-over" class="game-over" style="display: none;">
+                <h2>Game Over! 🎉</h2>
+                <div class="final-stats">
+                    <p><strong>Total Score:</strong> <span id="final-score">0</span></p>
+                    <p><strong>Correct Answers:</strong> <span id="correct-answers">0</span>/10</p>
+                    <p><strong>Accuracy:</strong> <span id="accuracy">0</span>%</p>
+                    <p><strong>Best Streak:</strong> <span id="best-streak">0</span></p>
+                </div>
+                <button id="play-again-btn" class="play-again-btn">Play Again</button>
+            </div>
+        </div>
+
+        <div class="difficulty-selector">
+            <label for="difficulty">Difficulty:</label>
+            <select id="difficulty" class="difficulty-select">
+                <option value="easy">Easy (1-10)</option>
+                <option value="medium" selected>Medium (1-50)</option>
+                <option value="hard">Hard (1-100)</option>
+            </select>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
